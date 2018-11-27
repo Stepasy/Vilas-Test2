@@ -368,7 +368,6 @@ body {
       flex-wrap: wrap; }
 
 .about {
-  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -400,5 +399,78 @@ body {
     width: 40%; }
     .about-slider-header {
       font: bold 20px "Arvo"; }
+
+.portfolio-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: auto;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+.portfolio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-top: 110px; }
+  .portfolio-title {
+    font: bold 25px "Arvo";
+    color: #3e3e3e; }
+  .portfolio-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 30px 0 100px 0; }
+    .portfolio-list-item-big {
+      height: 450px;
+      width: 350px; }
+    .portfolio-list-item-small {
+      height: 210px;
+      width: 350px; }
+    .portfolio-list-item-small, .portfolio-list-item-big {
+      margin: 25px 25px 0 0; }
+      .portfolio-list-item-small img, .portfolio-list-item-big img {
+        -webkit-box-shadow: 0px 0px 20px 0px #cecece;
+                box-shadow: 0px 0px 20px 0px #cecece; }
+  .portfolio-button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 160px;
+    height: 49px;
+    font: normal 18px "Arvo";
+    color: #dadada;
+    border-radius: 10px;
+    background-color: #3e3e3e;
+    text-transform: capitalize;
+    margin-bottom: 100px; }
+  .portfolio-button:hover {
+    color: #d3d3d3;
+    background-color: #3e3e3e; }
 
 /*# sourceMappingURL=style.min.css.map */

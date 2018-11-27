@@ -1,0 +1,60 @@
+.portfolio-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+}
+
+.portfolio {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-top: 110px;
+    &-title {
+        font: bold 25px "Arvo";
+        color: #3e3e3e;
+    }
+    &-list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 30px 0 100px 0;
+        &-item-big {
+            height: 450px;
+            width: 350px;
+        }
+        &-item-small {
+            height: 210px;
+            width: 350px;
+        }
+        &-item-small,
+        &-item-big {
+            margin: 25px 25px 0 0;
+            img {
+                box-shadow: 0px 0px 20px 0px #cecece;
+            }
+        }
+        .column1 {}
+        .column2 {}
+        .column3 {}
+    }
+    &-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 160px;
+        height: 49px;
+        font: normal 18px "Arvo";
+        color: #dadada;
+        border-radius: 10px;
+        background-color: #3e3e3e;
+        text-transform: capitalize;
+        margin-bottom: 100px;
+    }
+    &-button:hover {
+        color: #d3d3d3;
+        background-color: #3e3e3e;
+    }
+}
