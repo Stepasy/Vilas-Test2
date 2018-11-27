@@ -1,0 +1,134 @@
+.wrapper-header{
+    position: relative;
+    background-image: url(/src/images/header-bg.png);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    min-height: 650px;
+    flex-wrap: wrap;
+    &:after{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        content: '';
+        top: 0;
+        left: 0;
+         background-color: #d9d9d9;
+        opacity: 0.35;
+        z-index: 0;
+    }
+}
+
+.header{
+    width: 1110px;
+    z-index: 1;
+    &-menu{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 22px;
+        flex-wrap: wrap;
+        .fas{
+            color: #3e3e3e;
+        }
+        .logo{
+            font: normal 40px "Arvo";
+            color: #3e3e3e;
+        }
+        .header-nav{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            .navbar{
+                display: flex;
+                display: none;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                padding-top: 14px;
+                ul{
+                    display: flex;
+                    flex-direction: row;
+                    li{
+                        margin-right: 30px;
+                        a{
+                            font: bold 17px "Roboto";
+                            padding: 10px 20px;
+                            border-radius: 10px;
+                            color: #3e3e3e;
+                        }
+                    }
+                    li:hover{
+                        a{
+                            color: #d3d3d3;
+                            background-color: #3e3e3e;
+                        }
+                    }
+                }
+            }
+            .menu{
+                width: 26.25px;
+                .fa-bars{
+                    position: absolute;
+                }
+                .fa-minus-circle{
+                    display: none;
+                }
+                .fa-plus-circle,
+                .fa-minus-circle{
+                    position: relative;
+                    background-color: #fff;
+                    border-radius: 50px;
+                    top: 17px;
+                    left: 6px;
+                }
+            }
+        }
+    }
+    &-main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 195px;
+        width: 100%;
+        &-title{
+            font: bold 40px "Arvo";
+            color: #3e3e3e;
+            margin-bottom: 20px;
+        }
+        &-slogan{
+            font: normal 35px "Arvo";
+            color: #3e3e3e;
+            margin-bottom: 25px;
+        }
+        P{
+            font: normal 15px "Poppins";
+            color: #3e3e3e;
+            max-width: 538px;
+            text-align: center;
+        }
+        .buttons{
+            margin-top: 45px;
+            display: flex;
+            flex-direction: row;
+            a{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font: normal 18px "Arvo";
+                color: #dadada;
+                width: 160px;
+                height: 49px;
+                border-radius: 10px;
+                background-color: #3e3e3e;
+                margin-left: 35px;
+            }
+            a:hover{
+                color: #3e3e3e;
+                background-color: #dadada;
+            }
+        }
+        
+    }
+}

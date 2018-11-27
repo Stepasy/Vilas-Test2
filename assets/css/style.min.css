@@ -1,0 +1,404 @@
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both; }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0; }
+
+.sr-only-focusable:active, .sr-only-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto; }
+
+.ellipsis {
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  overflow: hidden; }
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit; }
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #000;
+  background: #fff;
+  font: 16px/1.2 Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  min-width: 320px; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+.gm-style img {
+  max-width: none; }
+
+@media only screen and (min-width: 1025px) {
+  a[href^="tel"], a[href^="skype"], a[href^="sms"] {
+    cursor: default;
+    pointer-events: none; } }
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+  ul li {
+    margin: 0;
+    padding: 0; }
+
+a {
+  text-decoration: none; }
+
+span {
+  padding: 0;
+  margin: 0; }
+
+h1, h2, h3, h4, a, p {
+  padding: 0;
+  margin: 0; }
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6,
+.h {
+  font-family: inherit;
+  font-weight: bold;
+  margin: 0 0 0.5em;
+  color: inherit; }
+
+h1, .h1 {
+  font-size: 30px; }
+
+h2, .h2 {
+  font-size: 27px; }
+
+h3, .h3 {
+  font-size: 24px; }
+
+h4, .h4 {
+  font-size: 21px; }
+
+h5, .h5 {
+  font-size: 17px; }
+
+h6, .h6 {
+  font-size: 15px; }
+
+p {
+  margin: 0 0 1em; }
+
+a {
+  color: #39f; }
+  a:hover, a:focus {
+    text-decoration: none; }
+
+form,
+fieldset {
+  margin: 0;
+  padding: 0;
+  border-style: none; }
+
+input[type='text'],
+input[type='tel'],
+input[type='email'],
+input[type='search'],
+input[type='password'],
+textarea {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid #999;
+  padding: 0.4em 0.7em;
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; }
+  input[type='text']:focus,
+  input[type='tel']:focus,
+  input[type='email']:focus,
+  input[type='search']:focus,
+  input[type='password']:focus,
+  textarea:focus {
+    border-color: #000; }
+  input[type='text']::-webkit-input-placeholder,
+  input[type='tel']::-webkit-input-placeholder,
+  input[type='email']::-webkit-input-placeholder,
+  input[type='search']::-webkit-input-placeholder,
+  input[type='password']::-webkit-input-placeholder,
+  textarea::-webkit-input-placeholder {
+    color: #999; }
+  input[type='text']::-moz-placeholder,
+  input[type='tel']::-moz-placeholder,
+  input[type='email']::-moz-placeholder,
+  input[type='search']::-moz-placeholder,
+  input[type='password']::-moz-placeholder,
+  textarea::-moz-placeholder {
+    opacity: 1;
+    color: #999; }
+  input[type='text']:-moz-placeholder,
+  input[type='tel']:-moz-placeholder,
+  input[type='email']:-moz-placeholder,
+  input[type='search']:-moz-placeholder,
+  input[type='password']:-moz-placeholder,
+  textarea:-moz-placeholder {
+    color: #999; }
+  input[type='text']:-ms-input-placeholder,
+  input[type='tel']:-ms-input-placeholder,
+  input[type='email']:-ms-input-placeholder,
+  input[type='search']:-ms-input-placeholder,
+  input[type='password']:-ms-input-placeholder,
+  textarea:-ms-input-placeholder {
+    color: #999; }
+  input[type='text'].placeholder,
+  input[type='tel'].placeholder,
+  input[type='email'].placeholder,
+  input[type='search'].placeholder,
+  input[type='password'].placeholder,
+  textarea.placeholder {
+    color: #999; }
+
+select {
+  -webkit-border-radius: 0; }
+
+textarea {
+  resize: vertical;
+  vertical-align: top; }
+
+button,
+input[type='button'],
+input[type='reset'],
+input[type='file'],
+input[type='submit'] {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  cursor: pointer; }
+
+body {
+  font: normal 15px "Roboto"; }
+
+.wrapper-header {
+  position: relative;
+  background-image: url(/src/images/header-bg.png);
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  min-height: 650px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+  .wrapper-header:after {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    content: '';
+    top: 0;
+    left: 0;
+    background-color: #d9d9d9;
+    opacity: 0.35;
+    z-index: 0; }
+
+.header {
+  width: 1110px;
+  z-index: 1; }
+  .header-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-top: 22px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+    .header-menu .fas {
+      color: #3e3e3e; }
+    .header-menu .logo {
+      font: normal 40px "Arvo";
+      color: #3e3e3e; }
+    .header-menu .header-nav {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      .header-menu .header-nav .navbar {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        display: none;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+        padding-top: 14px; }
+        .header-menu .header-nav .navbar ul {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: row;
+                  flex-direction: row; }
+          .header-menu .header-nav .navbar ul li {
+            margin-right: 30px; }
+            .header-menu .header-nav .navbar ul li a {
+              font: bold 17px "Roboto";
+              padding: 10px 20px;
+              border-radius: 10px;
+              color: #3e3e3e; }
+          .header-menu .header-nav .navbar ul li:hover a {
+            color: #d3d3d3;
+            background-color: #3e3e3e; }
+      .header-menu .header-nav .menu {
+        width: 26.25px; }
+        .header-menu .header-nav .menu .fa-bars {
+          position: absolute; }
+        .header-menu .header-nav .menu .fa-minus-circle {
+          display: none; }
+        .header-menu .header-nav .menu .fa-plus-circle,
+        .header-menu .header-nav .menu .fa-minus-circle {
+          position: relative;
+          background-color: #fff;
+          border-radius: 50px;
+          top: 17px;
+          left: 6px; }
+  .header-main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 195px;
+    width: 100%; }
+    .header-main-title {
+      font: bold 40px "Arvo";
+      color: #3e3e3e;
+      margin-bottom: 20px; }
+    .header-main-slogan {
+      font: normal 35px "Arvo";
+      color: #3e3e3e;
+      margin-bottom: 25px; }
+    .header-main P {
+      font: normal 15px "Poppins";
+      color: #3e3e3e;
+      max-width: 538px;
+      text-align: center; }
+    .header-main .buttons {
+      margin-top: 45px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row; }
+      .header-main .buttons a {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        font: normal 18px "Arvo";
+        color: #dadada;
+        width: 160px;
+        height: 49px;
+        border-radius: 10px;
+        background-color: #3e3e3e;
+        margin-left: 35px; }
+      .header-main .buttons a:hover {
+        color: #3e3e3e;
+        background-color: #dadada; }
+
+.about-wrapper {
+  background-color: #e9e9e9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: auto;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+.about {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 1110px;
+  padding: 120px 0 100px 0; }
+  .about-text {
+    padding: 55px 65px;
+    border-radius: 10px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    -webkit-box-shadow: 2px 3.464px 18px rgba(1, 1, 1, 0.14);
+            box-shadow: 2px 3.464px 18px rgba(1, 1, 1, 0.14);
+    font: normal 15px "Roboto";
+    color: #3e3e3e;
+    width: 50%; }
+    .about-text-scaled {
+      font: bold 30px "Arvo"; }
+  .about-slider {
+    font: normal 15px "Poppins";
+    margin: 3px 0 0 0;
+    color: #3e3e3e;
+    width: 40%; }
+    .about-slider-header {
+      font: bold 20px "Arvo"; }
+
+/*# sourceMappingURL=style.min.css.map */
