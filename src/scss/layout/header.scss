@@ -1,4 +1,4 @@
-.wrapper-header{
+.wrapper-header {
     position: relative;
     background-image: url(/src/images/header-bg.png);
     background-size: cover;
@@ -7,76 +7,89 @@
     width: 100%;
     min-height: 650px;
     flex-wrap: wrap;
-    &:after{
+    &:after {
         position: absolute;
         height: 100%;
         width: 100%;
         content: '';
         top: 0;
         left: 0;
-         background-color: #d9d9d9;
+        background-color: #d9d9d9;
         opacity: 0.35;
         z-index: 0;
     }
 }
 
-.header{
+.header {
     width: 1110px;
     z-index: 1;
-    &-menu{
+    &-menu {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
         padding-top: 22px;
         flex-wrap: wrap;
-        .fas{
+        .fas {
             color: #3e3e3e;
         }
-        .logo{
+        .logo {
             font: normal 40px "Arvo";
             color: #3e3e3e;
         }
-        .header-nav{
+        .header-nav {
             display: flex;
             flex-direction: row;
             align-items: center;
-            .navbar{
+            .navbar {
                 display: flex;
                 display: none;
                 flex-direction: row;
                 flex-wrap: nowrap;
                 padding-top: 14px;
-                ul{
+                ul {
                     display: flex;
                     flex-direction: row;
-                    li{
+                    li {
                         margin-right: 30px;
-                        a{
+                        a {
                             font: bold 17px "Roboto";
                             padding: 10px 20px;
                             border-radius: 10px;
                             color: #3e3e3e;
                         }
                     }
-                    li:hover{
-                        a{
+                    li:hover {
+                        a {
                             color: #d3d3d3;
                             background-color: #3e3e3e;
                         }
                     }
+                    @media (max-width: 825px) {
+                        flex-direction: column;
+                        li {
+                            margin-top: 10px;
+                            a {
+                                padding: 0;
+                                &:hover {
+                                    color: #3e3e3e;
+                                    background-color: transparent;
+                                }
+                            }
+                        }
+                    }
                 }
             }
-            .menu{
+            .menu {
                 width: 26.25px;
-                .fa-bars{
+                .fa-bars {
                     position: absolute;
                 }
-                .fa-minus-circle{
+                .fa-minus-circle {
                     display: none;
                 }
                 .fa-plus-circle,
-                .fa-minus-circle{
+                .fa-minus-circle {
                     position: relative;
                     background-color: #fff;
                     border-radius: 50px;
@@ -85,34 +98,40 @@
                 }
             }
         }
+        @media (max-width: 1110px) {
+            padding-left: 5%;
+            padding-right: 5%;
+        }
     }
-    &-main{
+    &-main {
         display: flex;
         flex-direction: column;
         align-items: center;
         margin-top: 195px;
         width: 100%;
-        &-title{
+        flex-wrap: wrap;
+        &-title {
             font: bold 40px "Arvo";
             color: #3e3e3e;
             margin-bottom: 20px;
         }
-        &-slogan{
+        &-slogan {
             font: normal 35px "Arvo";
             color: #3e3e3e;
             margin-bottom: 25px;
         }
-        P{
+        P {
             font: normal 15px "Poppins";
             color: #3e3e3e;
             max-width: 538px;
             text-align: center;
         }
-        .buttons{
+        .buttons {
             margin-top: 45px;
             display: flex;
             flex-direction: row;
-            a{
+            flex-wrap: wrap;
+            a {
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -124,11 +143,21 @@
                 background-color: #3e3e3e;
                 margin-left: 35px;
             }
-            a:hover{
+            a:hover {
                 color: #3e3e3e;
                 background-color: #dadada;
             }
+            @media (max-width: 451px) {
+                flex-direction: column;
+                a {
+                    margin-top: 25px;
+                    align-self: center;
+                    margin-left: 0;
+                }
+            }
         }
-        
+    }
+    @media (max-width: 507px) {
+        padding: 0 5%;
     }
 }
