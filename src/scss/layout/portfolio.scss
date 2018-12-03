@@ -21,14 +21,14 @@
         flex-direction: row;
         flex-wrap: wrap;
         padding: 30px 0 100px 0;
+        .column:nth-child(2){
+            margin: 0 25px;
+        }
         &-item-small,
         &-item-big {
             position: relative;
-            margin: 25px 25px 0 0;
             box-shadow: 0px 0px 20px 0px #cecece;
-            img {
-                width: 350px;
-            }
+            margin: 30px 0;
             .buttons-holder,
             .text-holder {
                 position: absolute;
@@ -103,6 +103,18 @@
                 .text-holder {
                     display: block;
                 }
+            }
+        }
+        @media (max-width: 1109px){
+            justify-content: center;
+            align-items: center;
+            .column:nth-child(2){
+                margin-right: 0;
+            }
+        }
+        @media (max-width: 699px){
+            .column:nth-child(2){
+                margin-left: 0;
             }
         }
     }

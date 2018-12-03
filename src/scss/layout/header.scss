@@ -36,6 +36,7 @@
         .logo {
             font: normal 40px "Arvo";
             color: #3e3e3e;
+            z-index: 2;
         }
         .header-nav {
             display: flex;
@@ -58,17 +59,25 @@
                             border-radius: 10px;
                             color: #3e3e3e;
                         }
-                    }
-                    li:hover {
-                        a {
-                            color: #d3d3d3;
-                            background-color: #3e3e3e;
+                        &:hover {
+                            a {
+                                color: #d3d3d3;
+                                background-color: #3e3e3e;
+                            }
                         }
                     }
                     @media (max-width: 825px) {
                         flex-direction: column;
+                        position: absolute;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: #d3d3d3;
+                        top: 0;
+                        left: 0;
+                        width: 100vw;
+                        height: 100vh;
                         li {
-                            margin-top: 10px;
+                            margin-top: 50px;
                             a {
                                 padding: 0;
                                 &:hover {
@@ -142,13 +151,18 @@
                 border-radius: 10px;
                 background-color: #3e3e3e;
                 margin-left: 35px;
+                &:hover {
+                    color: #3e3e3e;
+                    background-color: #dadada;
+                }
             }
-            a:hover {
-                color: #3e3e3e;
-                background-color: #dadada;
-            }
-            @media (max-width: 451px) {
+        }
+        @media (max-width: 451px) {
+            margin-top: 60px;
+            .buttons{
                 flex-direction: column;
+                padding-bottom: 0;
+                margin-top: 0;
                 a {
                     margin-top: 25px;
                     align-self: center;
