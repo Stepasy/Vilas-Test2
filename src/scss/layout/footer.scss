@@ -27,6 +27,12 @@
         flex-direction: row;
         flex-wrap: wrap;
         margin: 100px 0;
+        a {
+            margin-top: 10px;
+            &:hover {
+                color: #000;
+            }
+        }
         &-column {
             flex-grow: 0;
             flex-basis: 25%;
@@ -46,7 +52,9 @@
                 }
             }
             form {
-                display: inline;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
                 input {
                     width: 160px;
                     background-color: #eceaea;
@@ -69,6 +77,20 @@
                         color: #3e3e3e;
                     }
                 }
+            }
+        }
+        @media (max-width: 1110px) {
+            padding: 0 5%;
+            &-column {
+                margin-left: 5%;
+            }
+        }
+        @media (max-width: 600px) {
+            flex-direction: column;
+            margin: 0;
+            padding-bottom: 25px;
+            &-column {
+                margin-top: 25px;
             }
         }
     }

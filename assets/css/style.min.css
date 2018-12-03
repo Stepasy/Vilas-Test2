@@ -205,7 +205,7 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
-  min-height: 650px;
+  max-height: 650px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap; }
   .wrapper-header:after {
@@ -389,7 +389,8 @@ body {
           background-color: #dadada; }
     @media (max-width: 451px) {
       .header-main {
-        margin-top: 60px; }
+        margin-top: 60px;
+        margin-bottom: 25px; }
         .header-main .buttons {
           -webkit-box-orient: vertical;
           -webkit-box-direction: normal;
@@ -500,6 +501,11 @@ body {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding-top: 110px; }
+  @media (max-width: 767px) {
+    .portfolio {
+      padding-top: 25px; }
+      .portfolio-title {
+        margin-bottom: 0; } }
   .portfolio-title {
     font: bold 25px "Arvo";
     color: #3e3e3e; }
@@ -514,6 +520,10 @@ body {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     padding: 30px 0 100px 0; }
+    @media (max-width: 767px) {
+      .portfolio-list {
+        padding-top: 0;
+        padding-bottom: 0; } }
     .portfolio-list .column:nth-child(2) {
       margin: 0 25px; }
     .portfolio-list-item-small, .portfolio-list-item-big {
@@ -576,6 +586,10 @@ body {
     .portfolio-list-item-big:hover .text-holder, .portfolio-list-item-small:hover .buttons-holder,
     .portfolio-list-item-small:hover .text-holder {
       display: block; }
+    @media (max-width: 370px) {
+      .portfolio-list-item-big, .portfolio-list-item-small {
+        width: auto;
+        max-width: 100%; } }
     @media (max-width: 1109px) {
       .portfolio-list {
         -webkit-box-pack: center;
@@ -607,6 +621,9 @@ body {
     background-color: #3e3e3e;
     text-transform: capitalize;
     margin-bottom: 100px; }
+    @media (max-width: 767px) {
+      .portfolio-button {
+        margin-bottom: 25px; } }
   .portfolio-button:hover {
     color: #3e3e3e;
     background-color: #d3d3d3; }
@@ -657,6 +674,10 @@ body {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     margin: 100px 0; }
+    .footer .footer-main a {
+      margin-top: 10px; }
+      .footer .footer-main a:hover {
+        color: #000; }
     .footer .footer-main-column {
       -webkit-box-flex: 0;
           -ms-flex-positive: 0;
@@ -681,7 +702,15 @@ body {
         .footer .footer-main-column-links .blog-link-title {
           font-weight: bold; }
       .footer .footer-main-column form {
-        display: inline; }
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap; }
         .footer .footer-main-column form input {
           width: 160px;
           background-color: #eceaea;
@@ -701,5 +730,20 @@ body {
           .footer .footer-main-column form button:hover {
             background-color: #d3d3d3;
             color: #3e3e3e; }
+    @media (max-width: 1110px) {
+      .footer .footer-main {
+        padding: 0 5%; }
+        .footer .footer-main-column {
+          margin-left: 5%; } }
+    @media (max-width: 600px) {
+      .footer .footer-main {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        margin: 0;
+        padding-bottom: 25px; }
+        .footer .footer-main-column {
+          margin-top: 25px; } }
 
 /*# sourceMappingURL=style.min.css.map */

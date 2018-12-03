@@ -12,6 +12,12 @@
     flex-direction: column;
     flex-wrap: wrap;
     padding-top: 110px;
+    @media (max-width: 767px) {
+        padding-top: 25px;
+        &-title {
+            margin-bottom: 0;
+        }
+    }
     &-title {
         font: bold 25px "Arvo";
         color: #3e3e3e;
@@ -21,7 +27,11 @@
         flex-direction: row;
         flex-wrap: wrap;
         padding: 30px 0 100px 0;
-        .column:nth-child(2){
+        @media (max-width: 767px) {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+        .column:nth-child(2) {
             margin: 0 25px;
         }
         &-item-small,
@@ -104,16 +114,20 @@
                     display: block;
                 }
             }
+            @media (max-width: 370px) {
+                width: auto;
+                max-width: 100%;
+            }
         }
-        @media (max-width: 1109px){
+        @media (max-width: 1109px) {
             justify-content: center;
             align-items: center;
-            .column:nth-child(2){
+            .column:nth-child(2) {
                 margin-right: 0;
             }
         }
-        @media (max-width: 699px){
-            .column:nth-child(2){
+        @media (max-width: 699px) {
+            .column:nth-child(2) {
                 margin-left: 0;
             }
         }
@@ -130,6 +144,9 @@
         background-color: #3e3e3e;
         text-transform: capitalize;
         margin-bottom: 100px;
+        @media (max-width: 767px) {
+            margin-bottom: 25px;
+        }
     }
     &-button:hover {
         color: #3e3e3e;
