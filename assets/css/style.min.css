@@ -221,7 +221,8 @@ body {
 
 .header {
   width: 1110px;
-  z-index: 1; }
+  z-index: 1;
+  padding-bottom: 155px; }
   .header-menu {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -447,18 +448,27 @@ body {
     width: 50%; }
     .about-text-scaled {
       font: bold 30px "Arvo"; }
+  .about .slick {
+    max-width: 480px; }
+    @media (max-width: 767px) {
+      .about .slick {
+        max-width: 90%; } }
   .about-slider {
     font: normal 15px "Poppins";
     margin: 3px 0 0 0;
     color: #3e3e3e;
     width: 40%; }
     .about-slider-header {
-      font: bold 20px "Arvo"; }
-  @media (max-width: 1110px) {
-    .about {
-      padding-left: 5%;
-      padding-right: 5%; } }
-  @media (max-width: 767px) {
+      font: bold 20px "Arvo";
+      margin-bottom: 40px; }
+      @media (max-width: 767px) {
+        .about-slider-header {
+          margin-bottom: 25px; } }
+    @media (max-width: 640px) {
+      .about-slider {
+        padding-left: 5%;
+        padding-right: 5%; } }
+  @media (max-width: 768px) {
     .about {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
@@ -471,9 +481,7 @@ body {
       .about-text {
         padding: 5%;
         width: 90%;
-        margin-bottom: 25px; }
-      .about-slider {
-        width: 90%; } }
+        margin-bottom: 25px; } }
 
 .portfolio-wrapper {
   display: -webkit-box;
