@@ -27,6 +27,14 @@
         flex-direction: row;
         flex-wrap: wrap;
         margin: 100px 0;
+        @media (max-width: 1110px) {
+            padding: 0 15px;
+        }
+        @media (max-width: 600px) {
+            flex-direction: column;
+            margin: 0;
+            padding-bottom: 25px;
+        }
         a {
             margin-top: 10px;
             &:hover {
@@ -36,6 +44,12 @@
         &-column {
             flex-grow: 0;
             flex-basis: 25%;
+            @media (max-width: 1110px){
+                margin-left: 5%;
+            }
+            @media (max-width: 600px){
+                margin-top: 25px;
+            }
             &-title {
                 font-size: bold 20px "Arvo";
                 line-height: 20px;
@@ -73,24 +87,9 @@
                     font-style: "Arvo";
                     outline: none;
                     &:hover {
-                        background-color: #d3d3d3;
-                        color: #3e3e3e;
+                        opacity: 0.8;
                     }
                 }
-            }
-        }
-        @media (max-width: 1110px) {
-            padding: 0 5%;
-            &-column {
-                margin-left: 5%;
-            }
-        }
-        @media (max-width: 600px) {
-            flex-direction: column;
-            margin: 0;
-            padding-bottom: 25px;
-            &-column {
-                margin-top: 25px;
             }
         }
     }
