@@ -5,6 +5,9 @@
     width: 100%;
     height: auto;
     flex-wrap: wrap;
+    P{
+        padding: 0;
+    }
 }
 
 .about {
@@ -16,8 +19,9 @@
     padding: 120px 0 100px 0;
     @media (max-width: 960px){
         flex-direction: column;
-        align-items: center;
-        padding: 25px 0 25px 0;
+        align-items: flex-start;
+        padding: 25px 15px;
+        padding-bottom: 0;
     }
     &-text {
         padding: 55px 65px;
@@ -29,7 +33,7 @@
         width: 50%;
         @media (max-width: 960px){
             padding: 15px;
-            width: 90%;
+            width: 100%;
             margin-bottom: 25px;
         }
         &-scaled {
@@ -43,13 +47,16 @@
             flex-direction: row;
             max-width: 480px;
             @media (max-width: 960px){
-                max-width: 90%;
+                max-width: 100%;
             }
             .fa-chevron-left,
             .fa-chevron-right{
                 height: 0;
                 position: absolute;
                 left: 100%;
+                &:hover{
+                    opacity: 0.8;
+                }
             }
             .fa-chevron-left{
                 order: 2;
@@ -68,17 +75,26 @@
         margin: 3px 0 0 0;
         color: #3e3e3e;
         width: 40%;
-        max-height: 100%;
+        max-height: fit-content;
+        @media (max-width: 960px) {
+            width: 100%;
+        }
         @media (max-width: 640px){
-            padding-left: 5%;
-            padding-right: 5%;
+            padding-left: 15px;
+            padding-right: 15px;
         }
         &-header {
             font: bold 20px "Arvo";
             margin-bottom: 40px;
             @media (max-width: 960px){
-                margin-bottom: 25px;
+                margin-bottom: 10px;
+            }
+            @media(max-width: 390px){
+                font-size: 16px;
             }
         }
+    }
+    .slick-slide{
+        height: 100%;
     }
 }
