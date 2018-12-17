@@ -34,6 +34,7 @@
             flex-direction: column;
             margin: 0;
             padding-bottom: 25px;
+            padding-top: 25px;
         }
         a {
             margin-top: 10px;
@@ -44,11 +45,11 @@
         &-column {
             flex-grow: 0;
             flex-basis: 25%;
-            @media (max-width: 1110px){
-                margin-left: 5%;
-            }
             @media (max-width: 600px){
                 margin-top: 25px;
+                &:nth-child(1){
+                    margin-top: 0;
+                }
             }
             &-title {
                 font-size: bold 20px "Arvo";
