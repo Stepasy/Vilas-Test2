@@ -23,6 +23,10 @@
     &-title {
         font: bold 25px "Arvo";
         color: #3e3e3e;
+        @media (max-width: 480px){
+            margin: 0 15px;
+            text-align: center;
+        }
     }
     &-list {
         display: flex;
