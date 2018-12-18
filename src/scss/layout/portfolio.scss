@@ -23,8 +23,14 @@
     &-title {
         font: bold 25px "Arvo";
         color: #3e3e3e;
+        margin-bottom: 75px;
+        @media (max-width: 751px){
+            margin-bottom: 25px;
+            text-align: center;
+        }
         @media (max-width: 480px){
             margin: 0 15px;
+            margin-bottom: 25px;
             text-align: center;
         }
     }
@@ -32,25 +38,47 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        padding: 30px 0 100px 0;
         justify-content: space-evenly;
+        margin-bottom: 45px;
         @media(max-width: 767px){
-            padding-bottom: 0;
+            margin-bottom: 0;
         }
-        .column:nth-child(2){
-            margin: 0 25px;
-            @media(max-width: 560px){
-                margin: 0;
+        .column{
+            display: flex;
+            flex-direction: column;
+            &:nth-child(2){
+                margin: 0 25px;
+                @media(max-width: 1075px){
+                    margin-right: 0;
+                }
+                @media(max-width: 560px){
+                    margin: 0;
+                }
             }
         }
         &-item-small,
         &-item-big {
             position: relative;
-            box-shadow: 0px 0px 20px 0px #cecece;
-            margin: 30px 0;
+            margin-bottom: 25px;
+            &:hover {
+                &:after {
+                    position: absolute;
+                    height: 100%;
+                    width: 100%;
+                    content: '';
+                    top: 0;
+                    left: 0;
+                    background-color: #3e3e3e;
+                    opacity: 0.6;
+                    z-index: 0;
+                }
+                .buttons-holder,
+                .text-holder {
+                    display: block;
+                }
+            }
             img{
-                width: 100%;
-                height: 100%;
+                box-shadow: 0px 0px 20px 0px #cecece;
             }
             .buttons-holder,
             .text-holder {
@@ -71,6 +99,8 @@
             .text-holder {
                 width: 100%;
                 background-color: #d3d3d3;
+                bottom: 0;
+
                 h2 {
                     font: bold 18px "Arvo";
                     color: #3e3e3e;
@@ -82,51 +112,21 @@
             }
         }
         &-item-big {
-            height: 450px;
-            width: 350px;
             .buttons-holder {
                 top: 190px;
                 left: 120px;
             }
             .text-holder {
-                top: 335px;
                 padding: 30px 80px 30px 25px;
             }
         }
         &-item-small {
-            height: 210px;
-            width: 350px;
             .buttons-holder {
                 top: 50px;
                 left: 120px;
             }
             .text-holder {
-                top: 125px;
                 padding: 15px 80px 15px 25px;
-            }
-        }
-        &-item-big,
-        &-item-small {
-            @media (max-width: 370px) {
-                width: auto;
-                max-width: 100%;
-            }
-            &:hover {
-                &:after {
-                    position: absolute;
-                    height: 100%;
-                    width: 100%;
-                    content: '';
-                    top: 0;
-                    left: 0;
-                    background-color: #3e3e3e;
-                    opacity: 0.6;
-                    z-index: 0;
-                }
-                .buttons-holder,
-                .text-holder {
-                    display: block;
-                }
             }
         }
     }
