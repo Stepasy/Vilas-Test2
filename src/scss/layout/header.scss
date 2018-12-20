@@ -5,9 +5,8 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    max-height: 650px;
     flex-wrap: wrap;
-    padding: 22px 0 155px 0;
+    padding: 22px 0 135px 0;
     @media (max-width: 651px){
         padding-bottom: 45px;
     }
@@ -36,16 +35,15 @@
         justify-content: space-between;
         align-items: center;
         flex-wrap: wrap;
-        margin-bottom: 195px;
+        padding-bottom: 160px;
         @media (max-width: 451px) {
             margin-bottom: 60px;
         }
         .fas {
             color: #3e3e3e;
+            max-width: 15px;
         }
         .logo {
-            font: normal 40px "Arvo";
-            color: #3e3e3e;
             z-index: 2;
         }
         .header-nav {
@@ -62,8 +60,12 @@
                     display: flex;
                     flex-direction: row;
                     li {
+
+                        
                         margin-right: 30px;
                         a {
+                            @include animate(color);
+                            @include animate(background-color);
                             font: bold 17px "Roboto";
                             padding: 10px 20px;
                             border-radius: 10px;
@@ -136,18 +138,21 @@
     width: 100%;
     flex-wrap: wrap;
     z-index: 1;
+    padding: 15px;
     &-title {
         font: bold 40px "Arvo";
         color: #3e3e3e;
-        margin-bottom: 20px;
+        margin-bottom: 0;
+        letter-spacing: 1px;
+        text-align: center;
     }
     &-slogan {
-        font: normal 35px "Arvo";
+        font: 35px "Arvo";
         color: #3e3e3e;
         margin-bottom: 25px;
     }
     P {
-        font: normal 15px "Poppins";
+        font: 15px "Poppins";
         color: #3e3e3e;
         max-width: 538px;
         text-align: center;
@@ -167,13 +172,15 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            font: normal 18px "Arvo";
+            font: 18px "Arvo";
             color: #dadada;
             width: 160px;
             height: 49px;
             border-radius: 10px;
             background-color: #3e3e3e;
-            margin-left: 35px;
+            margin-right: 15px;
+            margin-left: 15px;
+            @include animate(opacity);
             @media (max-width: 451px) {
                 margin-top: 25px;
                 align-self: center;

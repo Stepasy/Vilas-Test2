@@ -9,37 +9,41 @@
 .about {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
     width: 1110px;
-    padding: 120px 0 100px 0;
-    @media (max-width: 900px){
+    padding: 120px 0 70px 0;
+    @media (max-width: 1045px){
         padding: 25px 15px;
+        justify-content: center;
     }
     &-text {
-        padding: 55px 65px;
+        padding: 45px 65px 0 65px;
         border-radius: 10px;
         box-shadow: 2px 3.464px 18px rgba(1, 1, 1, 0.14);
         color: #3e3e3e;
-        width: 45%;
-        @media (max-width: 900px){
+        max-width: 570px;
+        @media (max-width: 1045px){
             width: 100%;
             padding: 15px;
             margin-bottom: 25px;
         }
         &-scaled {
             font: bold 30px "Arvo";
+            letter-spacing: 1px;
         }
     }
     &-slider {
-        font: normal 15px "Poppins";
+        font: 15px "Poppins";
         color: #3e3e3e;
         &-header {
-            font: bold 20px "Arvo";
+            font: 800 20px "Arvo";
+            letter-spacing: 1px;
+            margin-bottom: 25px;
         }
     }
     .slider-holder{
-        width: 45%;
+        max-width: 475px;
         @media (max-width: 900px){
             width: 100%;
         }
@@ -50,7 +54,7 @@
                 position: absolute;
                 left: 100%;
                 &:before{
-                    padding: 0 5px;
+                    padding: 0;
                 }
             }
             &-disabled{
