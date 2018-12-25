@@ -2,13 +2,9 @@
     position: relative;
     background-image: url(/src/images/header-bg.png);
     background-size: cover;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    flex-wrap: wrap;
     padding: 22px 0 135px 0;
-    @media (max-width: 651px){
-        padding-bottom: 45px;
+    @include media ("<phone") {
+        padding: 22px 0 25px;
     }
     &:after {
         position: absolute;
@@ -19,25 +15,24 @@
         left: 0;
         background-color: #d9d9d9;
         opacity: 0.35;
-        z-index: 0;
+        z-index: -1;
     }
 }
 
 .header {
-    width: 1110px;
-    z-index: 2;
-    @media (max-width: 507px) {
-        padding: 0 15px;
-    }
+    max-width: 1140px;
+    padding: 0 15px;
+    width: 100%;
+    margin: 0 auto;
     &-menu {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
         flex-wrap: wrap;
-        padding-bottom: 160px;
-        @media (max-width: 451px) {
-            margin-bottom: 60px;
+        padding: 0 0 160px;
+        @include media("<phone") {
+            padding: 0 0 60px;
         }
         .fas {
             color: #3e3e3e;
@@ -45,6 +40,10 @@
         }
         .logo {
             z-index: 2;
+            @include animate(opacity);
+            &:hover {
+                opacity: 0.6;
+            }
         }
         .header-nav {
             display: flex;
@@ -55,14 +54,11 @@
                 display: none;
                 flex-direction: row;
                 flex-wrap: nowrap;
-                padding-top: 14px;
                 ul {
                     display: flex;
                     flex-direction: row;
                     li {
-
-                        
-                        margin-right: 30px;
+                        margin: 0 30px 0 0;
                         a {
                             @include animate(color);
                             @include animate(background-color);
@@ -78,7 +74,7 @@
                             }
                         }
                     }
-                    @media (max-width: 825px) {
+                    @include media("<desktop") {
                         flex-direction: column;
                         position: absolute;
                         justify-content: center;
@@ -90,8 +86,7 @@
                         height: 100vh;
                         li {
                             width: 100%;
-                            margin-right: 0;
-                            margin-top: 30px;
+                            margin: 30px 0 0;
                             text-align: center;
                             a {
                                 display: block;
@@ -106,8 +101,11 @@
                 }
             }
             .menu {
-                width: 26.25px;
                 cursor: pointer;
+                @include animate(opacity);
+                &:hover {
+                    opacity: 0.6;
+                }
                 .fa-bars {
                     position: absolute;
                 }
@@ -124,10 +122,6 @@
                 }
             }
         }
-        @media (max-width: 1110px) {
-            padding-left: 5%;
-            padding-right: 5%;
-        }
     }
 }
 
@@ -142,30 +136,30 @@
     &-title {
         font: bold 40px "Arvo";
         color: #3e3e3e;
-        margin-bottom: 0;
+        margin: 0;
         letter-spacing: 1px;
         text-align: center;
     }
     &-slogan {
         font: 35px "Arvo";
         color: #3e3e3e;
-        margin-bottom: 25px;
+        margin: 0 0 25px;
     }
     P {
         font: 15px "Poppins";
         color: #3e3e3e;
         max-width: 538px;
         text-align: center;
-        margin-bottom: 45px;
-        @media (max-width: 451px) {
-            margin-bottom: 0;
+        margin: 0 0 45px;
+        @include media("<phone") {
+            margin: 0;
         }
     }
     .buttons {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        @media (max-width: 451px) {
+        @include media("<phone") {
             flex-direction: column;
         }
         a {
@@ -178,13 +172,11 @@
             height: 49px;
             border-radius: 10px;
             background-color: #3e3e3e;
-            margin-right: 15px;
-            margin-left: 15px;
+            margin: 0 15px;
             @include animate(opacity);
-            @media (max-width: 451px) {
-                margin-top: 25px;
+            @include media("<phone") {
+                margin: 25px 0 0;
                 align-self: center;
-                margin-left: 0;
             }
             &:hover {
                 opacity: 0.8;

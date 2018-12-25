@@ -1,9 +1,5 @@
 .portfolio-wrapper {
-    display: flex;
-    justify-content: center;
     width: 100%;
-    height: auto;
-    flex-wrap: wrap;
 }
 
 .portfolio {
@@ -11,26 +7,26 @@
     align-items: center;
     flex-direction: column;
     flex-wrap: wrap;
-    padding-top: 106px;
-    padding-bottom: 100px;
-    @media (max-width: 767px) {
-        padding-top: 25px;
-        padding-bottom: 25px;
+    max-width: 1140px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 106px 15px 100px;
+    @include media ("<tablet") {
+        padding: 25px 15px;
         &-title {
-            margin-bottom: 0;
+            margin: 0;
         }
     }
     &-title {
         font: bold 25px "Arvo";
         color: #3e3e3e;
-        margin-bottom: 55px;
-        @media (max-width: 751px){
-            margin-bottom: 25px;
+        margin: 0 0 55px;
+        @include media ("<tablet") {
+            margin: 0 0 25px;
             text-align: center;
         }
-        @media (max-width: 480px){
-            margin: 0 15px;
-            margin-bottom: 25px;
+        @include media ("<phone") {
+            margin: 0 15px 25px;
             text-align: center;
         }
     }
@@ -39,29 +35,27 @@
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-evenly;
-        margin-bottom: 68px;
-        @media(max-width: 767px){
-            margin-bottom: 0;
+        margin: 0 0 68px;
+        width: 100%;
+        @include media ("<tablet") {
+            margin: 0;
         }
-        .column{
+        .column {
             display: flex;
             flex-direction: column;
-            &:nth-child(2){
-                margin: 0 25px;
-                @media(max-width: 1075px){
-                    margin-right: 0;
-                }
-                @media(max-width: 560px){
-                    margin: 0;
+            &:nth-child(2) {
+                padding: 0 15px;
+                @include media ("<phone") {
+                    padding: 0;
                 }
             }
         }
         &-item-small,
         &-item-big {
             position: relative;
-            margin-bottom: 25px;
+            margin: 0 0 25px;
             opacity: 1;
-            &:after{
+            &:after {
                 @include animate(opacity);
             }
             &:hover {
@@ -81,7 +75,7 @@
                     display: block;
                 }
             }
-            img{
+            img {
                 box-shadow: 0px 0px 20px 0px #cecece;
             }
             .buttons-holder,
@@ -92,10 +86,10 @@
             }
             .buttons-holder {
                 .fas {
-                    margin-left: 20px;
+                    margin: 0 0 0 20px;
                     color: #e9e9e9;
                     border-radius: 45px;
-                    &:hover{
+                    &:hover {
                         opacity: 0.8;
                     }
                 }
@@ -104,7 +98,6 @@
                 width: 100%;
                 background-color: #d3d3d3;
                 bottom: 0;
-
                 h2 {
                     font: bold 18px "Arvo";
                     color: #3e3e3e;
@@ -146,9 +139,10 @@
         background-color: #3e3e3e;
         text-transform: capitalize;
         @include animate(opacity);
-
         &:hover {
             opacity: 0.8;
         }
     }
 }
+
+;
